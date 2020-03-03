@@ -43,10 +43,12 @@ namespace ToDoList
       List<Item> allItems = Item.GetAll();
       if (allItems.Count > 0)
       {
+        int counter = 1;
         Console.WriteLine("Your to-do list includes:");
         foreach (Item item in allItems)
         {
-          Console.WriteLine(item.Description);
+          Console.WriteLine(counter + ". " + item.Description);
+          counter++;
         }
         Menu();
       }
